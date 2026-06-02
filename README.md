@@ -25,6 +25,8 @@ npm run deploy
 
 Before deploying, confirm the Cloudflare Pages project name and D1 database binding in `wrangler.jsonc`. The project name has been changed to `kaiedu-renewal`, but the database binding still points to the copied source configuration.
 
+For Git-connected Cloudflare Pages deployment, set the build command to `npm run build` and the build output directory to `dist`. See `CLOUDFLARE_DEPLOY.md`.
+
 ## Migration
 
 See `MIGRATION_PLAN.md` for the recommended route-by-route redesign plan.
