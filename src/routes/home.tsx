@@ -26,6 +26,11 @@ app.get('/', async (c) => {
           ============================================ */}
       <section class="relative min-h-[80vh] flex items-center justify-center px-margin-mobile md:px-margin-desktop pt-20 pb-32 overflow-hidden">
         <div class="absolute inset-0 z-0 pointer-events-none">
+          <img
+            alt="Abstract digital background"
+            class="kaiedu-hero-bg w-full h-full object-cover opacity-40 mix-blend-screen"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBSB0pQWSOA7h2Jj6A9ojPT57PxcqY4AY9uz6en-wqMGqqBo2FAZEX72fsy46mia01Y_eqCalo2EV8atVXM9OYBOf7hGuSMptEw3GuKX9Byz4SSulb2ib_qeEWnPoUxdiSR1GeO16gtQUQnwknJfyAmFxXHcPtCCTY9H9o9N0MQjZTkgBXYBuvuFmXuCsKm5LGmUmXQ_ARLymwXWF__gEWMOz5iJOKxn7GWLMz9PTMKGJ27GUUdK5iHQYZyG2Ysucu6l1IS1znHiAv"
+          />
           <div class="absolute top-1/3 left-1/2 w-[900px] h-[900px] bg-electric-cyan/5 rounded-full blur-[150px] mix-blend-screen transform -translate-x-1/2 -translate-y-1/2"></div>
           <div class="absolute inset-0 bg-gradient-to-b from-transparent to-background"></div>
         </div>
