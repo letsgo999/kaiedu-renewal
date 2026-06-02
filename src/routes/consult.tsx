@@ -13,66 +13,65 @@ const app = new Hono<{ Bindings: Bindings }>();
 app.get('/', (c) => {
   return c.render(
     <>
-      {/* 다크 미니 히어로 */}
-      <section class="hero-dark">
-        <div class="orb orb-1" style="width:280px;height:280px;top:-60px;right:10%;"></div>
-        <div class="orb orb-2" style="width:240px;height:240px;bottom:-100px;left:-20px;"></div>
-        <div class="orb orb-3" style="width:180px;height:180px;top:30%;right:40%;"></div>
-
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 pt-12 pb-10 sm:pt-16 sm:pb-12 text-center animate-slide-up">
-          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass text-xs font-medium text-neon-cyan mb-5">
-            <span class="live-dot" style="background:#00D9FF"></span>
-            POWERED BY CLAUDE SONNET 4
-          </div>
-          <h1 class="font-display font-extrabold tracking-tight text-white text-4xl sm:text-5xl lg:text-6xl leading-[1.05]">
-            10분이면 <span class="text-gradient-neon">맞춤 커리큘럼</span>이<br class="hidden sm:block" />
-            손에 들어옵니다
-          </h1>
-          <p class="mt-6 text-base sm:text-lg text-slate-300/90 max-w-2xl mx-auto leading-relaxed">
-            7가지 질문에 답하면 Claude AI가 주차별 학습 로드맵과 추천 도구,<br class="hidden sm:block" />
-            그리고 가장 잘 맞는 강사 3명을 자동 매칭해드립니다.
-          </p>
-          <div class="mt-7 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-slate-400">
-            <span class="inline-flex items-center gap-1.5"><i class="fas fa-circle-check text-emerald-400"></i> 회원가입 불필요</span>
-            <span class="inline-flex items-center gap-1.5"><i class="fas fa-circle-check text-emerald-400"></i> 100% 익명 처리</span>
-            <span class="inline-flex items-center gap-1.5"><i class="fas fa-circle-check text-emerald-400"></i> 베타 무료</span>
-          </div>
+      {/* 히어로 */}
+      <section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto pt-12 pb-8 md:pt-16 md:pb-10 text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-glass border border-glass-border text-electric-cyan font-label-caps text-label-caps mb-6">
+          <span class="material-symbols-outlined text-base">smart_toy</span>
+          POWERED BY CLAUDE SONNET 4
         </div>
-        <div class="gradient-divider"></div>
+        <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-5">
+          10분이면 <span class="text-electric-cyan text-glow">맞춤 커리큘럼</span>이<br class="hidden sm:block" />
+          손에 들어옵니다
+        </h1>
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+          7가지 질문에 답하면 Claude AI가 주차별 학습 로드맵과 추천 도구,<br class="hidden sm:block" />
+          그리고 가장 잘 맞는 강사 3명을 자동 매칭해드립니다.
+        </p>
+        <div class="mt-7 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-on-surface-variant font-body-md text-sm">
+          <span class="inline-flex items-center gap-1.5"><span class="material-symbols-outlined text-electric-cyan text-lg">check_circle</span> 회원가입 불필요</span>
+          <span class="inline-flex items-center gap-1.5"><span class="material-symbols-outlined text-electric-cyan text-lg">check_circle</span> 100% 익명 처리</span>
+          <span class="inline-flex items-center gap-1.5"><span class="material-symbols-outlined text-electric-cyan text-lg">check_circle</span> 베타 무료</span>
+        </div>
       </section>
 
       {/* 챗봇 */}
-      <div class="max-w-3xl mx-auto px-4 sm:px-6 -mt-6 pb-16 relative z-10">
-        <div id="consult-chat" class="glass-strong bg-ink-900/95 rounded-2xl shadow-2xl overflow-hidden border border-white/10">
+      <div class="px-margin-mobile md:px-margin-desktop max-w-3xl mx-auto pb-20 relative z-10">
+        <div id="consult-chat" class="bg-surface-container-low/80 border border-glass-border rounded-xl backdrop-blur-md shadow-2xl overflow-hidden relative">
+          <div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-electric-cyan to-transparent"></div>
+
           {/* 윈도우 헤더 */}
-          <div class="flex items-center justify-between px-5 py-3 border-b border-white/10 bg-black/20">
-            <div class="code-dots"><span></span><span></span><span></span></div>
-            <div class="text-[11px] text-slate-400 font-medium tracking-[0.2em]">AI CONSULT · CLAUDE SONNET 4</div>
+          <div class="flex items-center justify-between px-5 py-3 border-b border-glass-border bg-surface-container-lowest/60">
+            <div class="flex items-center gap-1.5">
+              <span class="w-3 h-3 rounded-full bg-neon-violet/70"></span>
+              <span class="w-3 h-3 rounded-full bg-electric-cyan/40"></span>
+              <span class="w-3 h-3 rounded-full bg-on-surface-variant/30"></span>
+            </div>
+            <div class="font-label-caps text-label-caps text-on-surface-variant">AI CONSULT · CLAUDE SONNET 4</div>
             <div class="w-12"></div>
           </div>
 
           {/* 진행률 */}
-          <div class="px-6 pt-4 pb-2 bg-black/10">
-            <div class="flex justify-between text-[11px] text-slate-400 mb-1.5">
-              <span id="step-label" class="font-semibold tracking-wider">시작</span>
-              <span id="step-count" class="font-mono">0 / 7</span>
+          <div class="px-6 pt-4 pb-3 bg-surface-container-lowest/30">
+            <div class="flex justify-between font-label-caps text-label-caps mb-2">
+              <span id="step-label" class="text-electric-cyan">시작</span>
+              <span id="step-count" class="text-on-surface-variant">0 / 7</span>
             </div>
-            <div class="h-1 bg-white/5 rounded-full overflow-hidden">
-              <div id="progress-bar" class="h-full bg-gradient-to-r from-neon-cyan via-neon-blue to-neon-violet transition-all duration-500" style="width: 0%"></div>
+            <div class="h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+              <div id="progress-bar" class="h-full bg-gradient-to-r from-electric-cyan to-neon-violet box-glow transition-all duration-500" style="width: 0%"></div>
             </div>
           </div>
 
-          {/* 메시지 영역 — 다크 톤 */}
+          {/* 메시지 영역 */}
           <div id="chat-messages" class="consult-msgs px-6 py-6 min-h-[440px] max-h-[60vh] overflow-y-auto flex flex-col gap-3"></div>
 
-          {/* 입력 영역 — 다크 톤 */}
-          <div id="chat-input-area" class="consult-input-area px-6 py-5 border-t border-white/10 bg-black/20"></div>
+          {/* 입력 영역 */}
+          <div id="chat-input-area" class="consult-input-area px-6 py-5 border-t border-glass-border bg-surface-container-lowest/60"></div>
         </div>
 
         {/* 신뢰 라인 */}
-        <div class="mt-5 flex items-center justify-center gap-5 text-[11px] text-brand-sub">
-          <span class="inline-flex items-center gap-1.5"><i class="fas fa-shield-halved text-emerald-500"></i> 입력 정보는 커리큘럼 생성과 강사 매칭에만 사용</span>
-          <span class="hidden sm:inline-flex items-center gap-1.5"><i class="fas fa-bolt text-amber-500"></i> 평균 응답 15초 이내</span>
+        <div class="mt-5 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-on-surface-variant/80 font-body-md text-xs">
+          <span class="inline-flex items-center gap-1.5"><span class="material-symbols-outlined text-electric-cyan text-base">shield</span> 입력 정보는 커리큘럼 생성과 강사 매칭에만 사용</span>
+          <span class="hidden sm:inline-flex items-center gap-1.5"><span class="material-symbols-outlined text-electric-cyan text-base">bolt</span> 평균 응답 15초 이내</span>
         </div>
       </div>
 
@@ -90,7 +89,7 @@ app.get('/', (c) => {
         }) }}
       />
     </>,
-    { title: 'AI 커리큘럼 상담', currentPath: '/consult' }
+    { title: 'AI 커리큘럼 상담', currentPath: '/consult', variant: 'stitch' }
   );
 });
 
