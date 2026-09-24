@@ -157,7 +157,7 @@ app.get('/sitemap.xml', (c) => {
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://kaiedu.center/download/privacy.html</loc>
+    <loc>https://kaiedu.center/download/privacy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
