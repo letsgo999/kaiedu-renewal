@@ -28,6 +28,7 @@ export const renderer = jsxRenderer(({ children, title, description, currentPath
         <meta name="author" content="한국인공지능교육센터" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta name="googlebot" content="index, follow" />
+        <meta name="google-site-verification" content="LC2rN1C_Qy6up-2fFHBfyPdr_vWRMKY_bZAlGxxNPkM" />
         <link rel="canonical" href={canonicalUrl} />
 
         {/* Open Graph (Facebook, KakaoTalk, LinkedIn, LINE) */}
