@@ -276,6 +276,7 @@ function StitchFooter() {
             <li><a href="/consult" class="hover:text-electric-cyan transition-colors">AI 커리큘럼 상담</a></li>
             <li><a href="/instructor/register" class="hover:text-electric-cyan transition-colors">강사 등록</a></li>
             <li><a href="/about" class="hover:text-electric-cyan transition-colors">센터 소개</a></li>
+            <li><a href="/download/" class="hover:text-electric-cyan transition-colors">KAIEDU Explorer</a></li>
             <li><a href="/legal/terms" class="hover:text-electric-cyan transition-colors">이용약관</a></li>
             <li><a href="/legal/privacy" class="hover:text-electric-cyan transition-colors">개인정보처리방침</a></li>
           </ul>
@@ -380,6 +381,7 @@ function Footer() {
             <li><a href="/consult" class="hover:text-white transition-colors">AI 커리큘럼 상담</a></li>
             <li><a href="/instructor/register" class="hover:text-white transition-colors">강사 등록</a></li>
             <li><a href="/about" class="hover:text-white transition-colors">센터 소개</a></li>
+            <li><a href="/download/" class="hover:text-white transition-colors">KAIEDU Explorer</a></li>
             <li><a href="/legal/terms" class="hover:text-white transition-colors">이용약관</a></li>
             <li><a href="/legal/privacy" class="hover:text-white transition-colors">개인정보처리방침</a></li>
           </ul>
